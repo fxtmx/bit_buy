@@ -1,5 +1,19 @@
-[workspace]
-members = [
-    "src/bit_buy_backend"
-]
-resolver = "2"
+[package]
+name = "bit_buy_backend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.10"   # To export and use candid types
+ic-cdk = "0.16"   # For interacting with the Internet Computer
+ic-cdk-macros = "0.16"   # Required for macros such as #[init], #[update], etc.
+sha2 = "0.10"     # For hashing (SHA-256)
+serde = { version = "1.0", features = ["derive"] }  # For serialization/deserialization
+hex = "0.4"       # For converting hash results to hexadecimal
+
+# Optional dependencies (feel free to remove if not used)
+# ic-cdk-timers = "0.10"
+
