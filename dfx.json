@@ -1,0 +1,38 @@
+{
+    "canisters": {
+      "bit_buy_backend": {
+        "candid": "src/bit_buy_backend/bit_buy_backend.did",
+        "wasm": "target/wasm32-unknown-unknown/release/bit_buy_backend.wasm",
+        "package": "bit_buy_backend",  
+        "type": "rust"
+      },
+      "bit_buy_frontend": {
+        "dependencies": [
+          "bit_buy_backend"
+        ],
+        "source": [
+          "src/bit_buy_frontend/assets"
+        ],
+        "type": "assets"
+      }
+    },
+    "networks": {
+      "local": {
+        "bind": "127.0.0.1:8000",
+        "type": "ephemeral"
+      },
+      "ic": {
+        "providers": ["https://mainnet.dfinity.network"]
+      }
+    },
+    "defaults": {
+      "build": {
+        "args": "",
+        "packtool": ""
+      }
+    },
+    "output_env_file": ".env",
+    "version": 1
+  }
+  
+  

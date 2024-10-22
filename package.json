@@ -1,0 +1,30 @@
+{
+    "name": "bit_buy_frontend",
+    "version": "1.0.0",
+    "description": "BitBuy frontend project",
+    "scripts": {
+        "build": "webpack --mode production",
+        "start": "webpack serve --open"
+    },
+    "dependencies": {
+        "glob": "^11.0.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "rimraf": "^6.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.22.5",
+        "@babel/preset-env": "^7.22.15",
+        "@babel/preset-react": "^7.18.6",
+        "babel-loader": "^9.1.3",
+        "css-loader": "^6.8.1",
+        "html-webpack-plugin": "^5.5.0",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.88.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.1.0"
+    },
+    "browserslist": [
+        "defaults"
+    ]
+}
